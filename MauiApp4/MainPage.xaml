@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp4.MainPage"
+             NavigationPage.HasNavigationBar="False"
+>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Contratação de Eventos!"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"
+             FontSize="50"
+             TextColor="{StaticResource White}"                 
+         />
+                <Frame Padding="10">
+                    <VerticalStackLayout>
+                        <Label 
+                         Text="Insira nome do Evento!"
+                         TextColor="Aqua"
+             
+                        />
+                        <Entry 
+                          x:Name="NomeEv"
+                        />
+                        <Label 
+                           Text="Insira a data de início do Evento!"
+                           TextColor="Aqua"
+                        />
+                        <DatePicker
+                            x:Name="comeco"
+                            Format="dd/MM/yyyy"
+                        />
+                        <Label 
+                              Text="Insira a data do fim do Evento!"
+                              TextColor="Aqua"
+                         /> 
+                        <DatePicker
+                              x:Name="dtpck_fm"
+                           
+                            Format="dd/MM/yyyy"
+                         />
+                    <Label Text="Insira a quantidade de particantes"
+                               TextColor="Aqua"/>
+                    <Entry x:Name="Part"
+                               />
+                    <Label Text="Insira o Local do Evento"
+                           />
+                    <Entry x:Name="Local"
+           />
+                    <Label Text="Custo por participante"
+                />
+                    <Entry x:Name="Custo"
+/>
+
+                </VerticalStackLayout>
+                </Frame>
+                <Button
+                x:Name="CounterBtn"
+                Text="Avançar"
+                    TextColor="White"
+                HorizontalOptions="Center"
+                    BackgroundColor="Black"
+                Clicked="OnCounterClicked"
+                 />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

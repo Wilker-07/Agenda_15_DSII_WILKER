@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp4.Views.NewPage1"
+             Title="NewPage1"
+             NavigationPage.HasNavigationBar="False"
+>
+    <VerticalStackLayout>
+        <Label 
+            Text="Resultado!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="50"
+            TextColor="{StaticResource Black}"/>
+
+        <Frame>
+            <VerticalStackLayout>
+                <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*, *">
+                    <Label Grid.Row="0" Grid.Column="0"
+    Text="            Nome:"
+    TextColor="White"/>
+                    <Label Grid.Row="0" Grid.Column="1"
+                    Text="{Binding Nome}"
+                    TextColor="White"
+                    
+                />
+                    <Label Grid.Row="1" Grid.Column="0"
+Text="Duração:"
+TextColor="White"/>
+                    <Label Text="{Binding  Duracao}" TextColor="White"
+                />
+                    <Label Grid.Row="1" Grid.Column="1"
+                    Text="{Binding NumP}"
+                    TextColor="White"
+    
+                />
+                        <Label Grid.Row="2" Grid.Column="0"
+Text="Local:"
+TextColor="White"/>
+                        <Label Grid.Row="2" Grid.Column="1"
+                    Text="{Binding Local}"
+                    TextColor="White"
+    
+                />
+                            <Label Grid.Row="3" Grid.Column="0"
+Text="Custo:"
+TextColor="White"/>
+                            <Label Grid.Row="3" Grid.Column="1"
+                    Text="{Binding Custo,StringFormat='{}{0:c}' }"
+                    TextColor="White"
+    
+                />
+                    </Grid>
+                            </VerticalStackLayout>
+
+        </Frame>
+        <Button
+x:Name="CounterBtn"
+Text="Voltar"
+    TextColor="White"
+HorizontalOptions="Center"
+    BackgroundColor="Black"
+Clicked="CounterBtn_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>
